@@ -54,8 +54,8 @@ public  double deposit(double amount) throws RuntimeException {
 public class Assignment4Q3 {
     public static void main(String[] args)  {
         savingAccount Sukumar = new savingAccount(10,9000);
-        Sukumar.deposit(-1);
-        Sukumar.withdraw(9100);
-        System.out.println(Sukumar.getBalance());
+        Mohsin.deposit(-1);
+        Mohsin.withdraw(9100);
+        System.out.println(Mohsin.getBalance());
     }
 }
