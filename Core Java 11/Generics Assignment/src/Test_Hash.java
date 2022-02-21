@@ -26,9 +26,9 @@ class Employees
 public class Test_Hash {
 	public static void main(String[] args)
 	{
-		Employees e1=new Employees(101,"Poonguzhali",50000,"Finance");
-		Employees e2=new Employees(102,"Hema",45000,"IT");
-		Employees e3=new Employees(103,"Alagarasan",55000,"Tax");
+		Employees e1=new Employees(101,"Mohsin",50000,"Finance");
+		Employees e2=new Employees(102,"Shaik",45000,"IT");
+		Employees e3=new Employees(103,"lucifer",55000,"Tax");
 		Set<Employees> employees= new HashSet<>();
 		employees.add(e1);
 		employees.add(e2);
