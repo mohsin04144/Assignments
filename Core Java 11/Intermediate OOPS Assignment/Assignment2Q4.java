@@ -50,7 +50,7 @@ class AbstClassP6ex extends MyClass3{
 
 public class Assingment2Q4 {
     public static void main(String[] args) {
-        person user1 = new person("Sukumar");
+        person user1 = new person("Mohsin");
         System.out.println(user1.getname());
      
         name point2 = new name("this is abstract");
