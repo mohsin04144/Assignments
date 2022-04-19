@@ -1,0 +1,52 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function(decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else
+        for (var i = decorators.length - 1; i >= 0; i--)
+            if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __param = (this && this.__param) || function(paramIndex, decorator) {
+    return function(target, key) { decorator(target, key, paramIndex); }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoginComponent = void 0;
+const core_1 = require("@angular/core");
+const dialog_1 = require("@angular/material/dialog");
+let LoginComponent = class LoginComponent {
+    constructor(dialogRef,
+        //@Optional() is used to prevent error if no data is passed
+        data) {
+        this.dialogRef = dialogRef;
+        this.invalid = false;
+    }
+    ngOnInit() {}
+    doAction() {
+        let role = "user";
+        if (this.Username === "poo" && this.Password === "poo") {
+            role = "admin";
+            this.dialogRef.close({ data: role });
+        } else if (this.Username === "hema" && this.Password === "hema") {
+            role = "owner";
+            this.dialogRef.close({ data: role });
+        } else {
+            this.invalid = true;
+        }
+    }
+    closeDialog() {
+        this.dialogRef.close({ event: 'Cancel' });
+    }
+};
+LoginComponent = __decorate([
+    (0, core_1.Component)({
+        selector: 'app-login',
+        templateUrl: './login.component.html',
+        styleUrls: ['./login.component.css']
+    }),
+    __param(1, (0, core_1.Optional)()),
+    __param(1, (0, core_1.Inject)(dialog_1.MAT_DIALOG_DATA))
+], LoginComponent);
+exports.LoginComponent = LoginComponent;
